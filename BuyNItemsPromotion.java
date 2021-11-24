@@ -6,9 +6,9 @@ import java.util.stream.Collectors;
 
 public class BuyNItemsPromotion extends Promotions {
 
-	private int quantity;
-	private char sku;
-	private double priceAfterPromotion;
+	public int quantity;
+	public char sku;
+	public double priceAfterPromotion;
 
 	public BuyNItemsPromotion(char sku, int quantity, double priceAfterPromotion) {
 		this.quantity = quantity;
@@ -17,7 +17,7 @@ public class BuyNItemsPromotion extends Promotions {
 	}
 
 	@Override
-	boolean isPromotionApplicable() {
+	 public boolean isPromotionApplicable() {
 
 		for (CartItem cartItem : CartItem.getCartItemsWithoutPromotion()) {
 
@@ -30,7 +30,7 @@ public class BuyNItemsPromotion extends Promotions {
 	}
 
 	@Override
-	double applyPromotion() {
+	public double applyPromotion() {
 		int quantityOfProductsForPromotion = quantity;
 		for (CartItem cartItem : CartItem.getCartItemsWithoutPromotion().stream().filter(x -> x.getProduct().getSKU() == sku)
 				.collect(Collectors.toList())) {

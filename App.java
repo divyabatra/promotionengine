@@ -14,12 +14,15 @@ public class App {
 		System.out.println(PriceEngine.calculatePrice());
 	}
 
-	private static void init() {
+	public static void init() {
 		cart = new ArrayList<CartItem>();
 		PromotionEngine.init();
 		Inventory.init();
 		
 		cart.add(new CartItem(Inventory.getProductBySKU('A'), 3));
 		cart.add(new CartItem(Inventory.getProductBySKU('B'), 2));
+		cart.add(new CartItem(Inventory.getProductBySKU('C'), 1));
+		cart.add(new CartItem(Inventory.getProductBySKU('D'), 1));
+		
 	}
 }

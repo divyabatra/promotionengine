@@ -19,7 +19,8 @@ public class PromotionEngine {
 	{
 		addPromotion(new BuyNItemsPromotion('A', 3, 130));
 		addPromotion(new BuyNItemsPromotion('B', 2, 45));
-		addPromotion(new BuyGroupItemsPromotion('A', 'B', 30));
+		addPromotion(new BuyGroupItemsPromotion('A', 'B', 65));
+		addPromotion(new BuyGroupItemsPromotion('C', 'D', 30));
 	}
 	
 
