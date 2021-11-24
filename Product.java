@@ -5,6 +5,12 @@ public class Product {
 	private char SKU;
 	private double price;
 	
+	Product(char sku, double price)
+	{
+		this.price = price;
+		this.SKU = sku;
+	}
+	
 	public char getSKU() {
 		return SKU;
 	}

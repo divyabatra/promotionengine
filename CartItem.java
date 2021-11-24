@@ -4,6 +4,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class CartItem {
+	
+	
+	CartItem(Product product,int quantity)
+	{
+		this.product = product;
+		this.quantity = quantity;
+		this.isPromotionApplied = false;
+		
+	}
 
 	private Product product;
 	private int quantity;

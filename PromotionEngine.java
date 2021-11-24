@@ -10,12 +10,12 @@ public class PromotionEngine {
 		return livePromotions;
 	}
 
-	public void addPromotion(Promotions promotion) {
+	public static void addPromotion(Promotions promotion) {
 		
 		livePromotions.add(promotion);
 	}
 	
-	public void init()
+	public static void init()
 	{
 		addPromotion(new BuyNItemsPromotion('A', 3, 130));
 		addPromotion(new BuyNItemsPromotion('B', 2, 45));

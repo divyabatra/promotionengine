@@ -9,11 +9,17 @@ public class App {
 
 	public static void main(String args[]) {
 
-		initCart();
-
+		init();
+		
+		System.out.println(PriceEngine.calculatePrice());
 	}
 
-	private static void initCart() {
+	private static void init() {
 		cart = new ArrayList<CartItem>();
+		PromotionEngine.init();
+		Inventory.init();
+		
+		cart.add(new CartItem(Inventory.getProductBySKU('A'), 3));
+		cart.add(new CartItem(Inventory.getProductBySKU('B'), 2));
 	}
 }
